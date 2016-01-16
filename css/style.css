@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	cursor: default !important;
+	-webkit-user-select: none;
+	user-drag: none;
+	-webkit-user-drag: none;
+	outline: none;
+	-webkit-outline: none;
+}
+
+body {
+	background-color: #262626;
+	font-family: 'Segoe UI', sans-serif;
+}
+
+img {
+	outline: none;
+}
+#video {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+img {
+	cursor: pointer !important;
+}
+#snap, #timer {
+	cursor: pointer !important;
+	width: 32px;
+	height: 32px;
+	position: fixed;
+	bottom: 0;
+	padding: 15px;
+	background-color: rgba( 0, 0, 0, .6 );
+	transition: 200ms background linear;
+}
+#snap:hover, #timer:hover {
+	background-color: rgba( 0, 150, 136, .6 );
+	transition: 200ms background linear;
+}
+#snap:active, #timer:active {
+	background-color: rgba( 0, 77, 64, .6 );
+	transition: 200ms background linear;
+}
+#timer {
+	left: 0;
+	border-radius: 0 5px 0 0;
+}
+#snap {
+	left: 50%;
+	border-radius: 5px 5px 0 0;
+}
+
+#shutterCanvas {
+	display: none;
+	z-index: 99;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 0 auto;
+}
+
+.grayscale {
+	-webkit-filter: grayscale(1);
+}
+
+#flashOverride {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	display: none;
+}
+
+#timerPanel {
+	width: 16%;
+	padding: 8px 15px;
+	position: fixed;
+	bottom: -60000px;
+	left: 0;
+	background-color: rgba( 0, 0, 0, .6 );
+	color: #fff;
+	border-radius: 0 5px 0 0 !important;
+}
+
+#timerCount {
+	font-size: 80px;
+	text-align: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	text-shadow: 0 0 50px #000;
+	display: none;
+}
+
+/*** RADIO BOX ****/
+input[type=radio], input[type=checkbox] {
+	display: none;
+}
+label {
+	display: inline-block;
+	cursor: pointer !important;
+	position: relative;
+	padding-left: 25px;
+	margin-right: 15px;
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+label:before {
+	content: "";
+	display: inline-block;
+
+	width: 14px;
+	height: 14px;
+
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	border: 3px solid #fff;
+	border-radius: 14px;
+
+	transition: 200ms border linear;
+}
+input[type=radio]:checked + label:before {
+	border-color: rgba( 0, 150, 136, .6 );
+	transition: 200ms border linear;
+
+	content: "\2022";
+	color: rgba( 0, 150, 136, .6 );
+	font-size: 35px;
+	text-align: center;
+	line-height: 8.8px;
+}

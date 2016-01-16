@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>EleCam</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="flashOverride"></div>
+		<video id="video" autoplay></video>
+		<canvas id="shutterCanvas">Wait, what the hell?</canvas>
+		<div id="snap"><img src="images/shutter.png"></div>
+		<div id="timer"><img src="images/timer.png"></div>
+		<div id="timerCount">-</div>
+		<div id="timerPanel">
+			<input type="radio" name="timerValue" class="timerValue" id="timerValue0" value="0" checked><label for="timerValue0">Instant</label><br>
+			<input type="radio" name="timerValue" class="timerValue" id="timerValue2" value="2"><label for="timerValue2">2 Sec.</label><br>
+			<input type="radio" name="timerValue" class="timerValue" id="timerValue5" value="5"><label for="timerValue5">5 Sec.</label><br>
+			<input type="radio" name="timerValue" class="timerValue" id="timerValue10" value="10"><label for="timerValue10">10 Sec.</label>
+		</div>
+
+		<script>window.jQuery = window.$ = require( './js/jquery.js' );</script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
